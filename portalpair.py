@@ -1,5 +1,4 @@
 import pygame
-from random import randint
 
 class PortalPair():
 	def __init__(self, screen, height, width, color):
