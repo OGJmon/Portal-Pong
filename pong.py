@@ -18,7 +18,7 @@ pygame.display.set_caption("Portal Pong")
 print(screen.get_size())
 
 clock = pygame.time.Clock() 
-FPS = 30		
+FPS = 30	
 
 def main():
 	running = True

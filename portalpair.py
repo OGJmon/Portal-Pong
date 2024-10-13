@@ -3,8 +3,11 @@ from random import randint
 
 class PortalPair():
 	def __init__(self, screen, height, width, color):
+     
+		### ONCE generate_location() is written change self.loc1 and self.loc2 to be equal to generate_location() ###
 		self.loc1 = [300, 180]
 		self.loc2 = [550, 420]
+  
 		self.loc_list = [self.loc1, self.loc2]
 		self.height = height
 		self.width = width
