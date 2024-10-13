@@ -34,7 +34,7 @@ class PortalPair():
 	
 	def update(self):
      
-		### UNCOMMENT ONCE GENERATE LOCATION HAS BEEN WRITTEN ###
+		### UNCOMMENT ONCE generate_location() HAS BEEN WRITTEN ###
 		# self.loc1 = self.generate_location()
 		# self.loc2 = self.generate_location()
   
@@ -49,6 +49,6 @@ class PortalPair():
 		self.portal_list = [self.portal1, self.portal2]
 
 
-	### NEED TO GENERATE RANDOM X & Y coordinates within screen and return them ###
+	### NEED TO GENERATE RANDOM X & Y coordinates within screen and return them as a list ###
 	def generate_location(self):
 		pass
