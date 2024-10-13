@@ -1,1 +1,1 @@
-A pong game with portals written in Python using Pygame
+# A pong game with portals written in Python using Pygame
