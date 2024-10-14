@@ -1,19 +1,19 @@
 import pygame
+import random
 
 class PortalPair():
 	def __init__(self, screen, height, width, color):
      
 		### ONCE generate_location() is written change self.loc1 and self.loc2 to be equal to generate_location() ###
-		self.loc1 = [300, 180]
-		self.loc2 = [550, 420]
-  
-		self.loc_list = [self.loc1, self.loc2]
 		self.height = height
 		self.width = width
 		self.color = color
 		self.screen = screen
 		self.screen_width = self.screen.get_size()[0]
 		self.screen_height = self.screen.get_size()[1]
+		self.loc1 = self.generate_location()
+		self.loc2 = self.generate_location()
+		self.loc_list = [self.loc1, self.loc2]
 		self.initialize()
 
 	def initialize(self):
@@ -36,9 +36,8 @@ class PortalPair():
 	
 	def update(self):
      
-		### UNCOMMENT ONCE generate_location() HAS BEEN WRITTEN ###
-		# self.loc1 = self.generate_location()
-		# self.loc2 = self.generate_location()
+		self.loc1 = self.generate_location()
+		self.loc2 = self.generate_location()
   
 		# Define rectangles
 		self.portal1_rect = pygame.Rect(self.loc1[0], self.loc1[1], self.width, self.height)
@@ -53,4 +52,8 @@ class PortalPair():
 
 	### NEED TO GENERATE RANDOM X & Y coordinates within screen and return them as a list ###
 	def generate_location(self):
-		pass
+		
+		# // Randomly generate coordinates between 0 and max
+		random_x = random.randint(0, self.screen_width)
+		random_y = random.randint(0, self.screen_height)
+		return (random_x, random_y)
